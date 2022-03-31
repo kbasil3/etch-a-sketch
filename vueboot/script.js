@@ -101,26 +101,3 @@ function reSize() {
 }
 reSize()
 
-function backgrooundAnim() {
-
-    colors = ['red','green','blue', 'yellow'];
-    const section = document.querySelector('.section');
-    const span = document.createElement('span');
-
-    let size = Math.random() * 50;
-
-    span.style.width = 10 + size + 'px';
-    span.style.height = 10 + size + 'px';
-    span.style.borderRadius = `${size}%`;
-    span.style.top = Math.random() * innerHeight + "px";
-    span.style.left = Math.random() * innerWidth + "px";
-
-    const bg = colors[Math.floor(Math.random() * colors.length)];
-    span.style.background = bg;
-
-    section.appendChild(span);
-
-    setTimeout(() => {span.remove()},5000)
-}
-
-setInterval(backgrooundAnim, 150);
